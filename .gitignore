@@ -1,0 +1,6 @@
+ENV
+WIN
+.idea
+*.pyc
+.DS_Store
+build
