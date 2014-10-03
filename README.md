@@ -51,6 +51,7 @@ Some of the packages installed via pip
 ## Running Tests
 
 As long as you set a proper `PYTHONPATH` to the root directory, you can run tests from within any directory. See behave documentation on how to add tags for running one test of many.
+
 Linux/Mac
 
 ```bash
@@ -67,6 +68,7 @@ $ # Run single test
 $ behave podio\features\login.feature
 $ # Alternatively, run all files in features directory
 $ behave podio\features
+```
 
 ## Environment settings
 
