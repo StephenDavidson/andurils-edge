@@ -2,11 +2,6 @@ from behave import step
 from behaving.web.steps import *
 from podio.page_objects.login_page import LoginPage
 
-@step('I log in')
-def log_in(context):
-    set_valid_credentials(context)
-    fill_login_form(context)
-    submit(context)
 
 @step('I have valid credentials')
 def set_valid_credentials(context):

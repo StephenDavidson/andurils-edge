@@ -9,4 +9,4 @@ Feature: Login
     And I have valid credentials
     When I fill in the login form
     And I submit the login form
-    #Then I should be logged in
+    Then I should be on the home page

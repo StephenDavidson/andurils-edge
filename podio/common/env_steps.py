@@ -19,7 +19,7 @@ def before_all(context):
     # Load in config
     context.accounts = config.accounts[environment]
     context.sites = config.sites[environment]
-    context.default_browser = os.environ.get('BROWSER', 'firefox')
+    context.default_browser = os.environ.get('BROWSER', 'chrome')
 
 def after_all(context):
     context.default_browser = ''

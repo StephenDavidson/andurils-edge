@@ -6,7 +6,7 @@ class User:
         pass
 
     @staticmethod
-    def create(user_type):
+    def create(user_type=None):
         fake = Faker()
         fake.add_provider(providers.general_provider)
         if user_type == 'US':
