@@ -24,6 +24,19 @@ cd to the git project
 pip install -r requirements.txt
 ```
 
+## Setting Credentials
+
+My preference is git-crypt(https://github.com/AGWA/git-crypt) but I wanted to make sure the project is compatible for windows machines.
+
+The tests will not run without local valid credentials. Perform the following steps:
+
+```
+1. Make a copy of accounts.dist in the config folder and name it accounts.yaml
+2. Edit the accounts.yaml
+3. Add the username and password
+4. Save the file
+```
+
 ## Package Overview
 
 Some of the packages installed via pip
@@ -67,10 +80,12 @@ Defaults to *production*
 
 ### BROWSER
 
-Defaults to *firefox*
+Defaults to *chrome*
 
 `export BROWSER=chrome`
 
-`Note: changing to the browser under test to chrome may require installing chromedriver:
+`Note: Chrome may require installing chromedriver:
 http://chromedriver.storage.googleapis.com/index.html`
+
+`Note: Firefox currently not supported
 

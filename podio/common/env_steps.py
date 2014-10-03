@@ -1,4 +1,5 @@
 import errno
+import logging
 import json
 import os
 import re
@@ -14,7 +15,8 @@ def before_all(context):
     environment = os.environ.get('ENV', 'production').lower()
     context.accounts = config.accounts[environment]
     context.sites = config.sites[environment]
-    context.default_browser = os.environ.get('BROWSER', 'firefox')
+    context.default_browser = os.environ.get('BROWSER', 'chrome')
+
 
 def after_all(context):
     context.default_browser = ''

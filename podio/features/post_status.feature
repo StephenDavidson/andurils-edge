@@ -14,5 +14,6 @@ Feature: Post
 
   @negative
   Scenario: Customer does not enter status and tries to post a status
+    Given I visit the home page
     When I click share post
     Then I should see a status post error icon
