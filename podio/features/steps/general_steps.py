@@ -8,7 +8,6 @@ from behaving.web.steps import *
 @step('I visit the {page_name} page')
 def visit(context, page_name):
     context.browser.visit(context.sites['url'] + page_name)
-    print context.browser.url
 
 @step('I should be on the {page_name} page')
 def should_be_on_page(context, page_name):

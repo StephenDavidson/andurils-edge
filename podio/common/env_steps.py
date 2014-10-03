@@ -1,5 +1,4 @@
 import errno
-import logging
 import json
 import os
 import re
