@@ -89,5 +89,5 @@ Defaults to *chrome*
 `Note: Chrome may require installing chromedriver:
 http://chromedriver.storage.googleapis.com/index.html`
 
-`Note: Firefox currently not supported
+`Note: Firefox currently not supported`
 
