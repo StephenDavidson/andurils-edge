@@ -5,7 +5,6 @@ import re
 import time
 from behaving.web import environment as benv
 from behaving.web.steps import browser
-from selenium import webdriver
 import config
 
 

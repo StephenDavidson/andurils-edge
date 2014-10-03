@@ -21,9 +21,7 @@ Some of the packages installed via pip
 * [splinter](http://splinter.cobrateam.info/) - An abstraction layer on top of selenium, underlying driver for behaving
 * [behave](https://github.com/behave/behave) - Behavior Driven Development (BDD) framework for creating non-technical feature and scenario tests using Gherkin syntax to execute steps
 * [behaving](https://github.com/ggozad/behaving) - Predefined steps in behave which are used for controlling the browser
-* [requests](http://docs.python-requests.org/en/latest/) - Used to communicate with APIs
 * [fake-factory](https://github.com/joke2k/faker) - Used to generate random data
-* [epydoc](http://epydoc.sourceforge.net/) - Documentation generator
 
 
 ## Running Tests
@@ -38,13 +36,13 @@ $ behave lib/testrepo/behaving/features
 
 ## Environment settings
 
-These environment variables influence settings and data drawn from [app.yaml](https://github.rackspace.com/rswebteam/qe/blob/master/config/app.yaml)
+These environment variables influence settings and data drawn from [sites.yaml]
 
 ### ENV
 
-Defaults to *staging*
+Defaults to *production*
 
-`export ENV=qe`
+`export ENV=production`
 
 ### BROWSER
 

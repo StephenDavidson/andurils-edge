@@ -5,5 +5,6 @@ class LoginPage(Page):
     ELEMENTS = {
         'email': '#email',
         'password': '#password',
-        'submit': ('commit', 'name')
+        'submit': ('commit', 'name'),
+        'warning': '.warning'
     }
