@@ -6,11 +6,22 @@
 
 ## Install
 
+Linux/Mac
 ```bash
 virtualenv ENV
 source ENV/bin/activate
+cd to the git project
 pip install -r requirements.txt
 export PYTHONPATH=$(pwd)
+```
+
+Windows (cmd.exe)
+```bash
+virtualenv ENV
+cd ENV\Scripts
+activate.bat
+cd to the git project
+pip install -r requirements.txt
 ```
 
 ## Package Overview
@@ -27,12 +38,22 @@ Some of the packages installed via pip
 ## Running Tests
 
 As long as you set a proper `PYTHONPATH` to the root directory, you can run tests from within any directory. See behave documentation on how to add tags for running one test of many.
+Linux/Mac
+
 ```bash
 $ # Run single test
-$ behave lib/testrepo/behaving/features/demo.feature
+$ behave podio/features/login.feature
 $ # Alternatively, run all files in features directory
-$ behave lib/testrepo/behaving/features
+$ behave podio/features
 ```
+
+Windows
+```bash
+$ cd <root_directory_path>
+$ # Run single test
+$ behave podio\features\login.feature
+$ # Alternatively, run all files in features directory
+$ behave podio\features
 
 ## Environment settings
 

@@ -12,13 +12,9 @@ import config
 def before_all(context):
     benv.before_all(context)
     environment = os.environ.get('ENV', 'production').lower()
-    # Change logging levels
-    #selenium_logger = logging.getLogger('selenium.webdriver.remote.remote_connection')
-    #selenium_logger.setLevel(logging.WARNING)
-    # Load in config
     context.accounts = config.accounts[environment]
     context.sites = config.sites[environment]
-    context.default_browser = os.environ.get('BROWSER', 'chrome')
+    context.default_browser = os.environ.get('BROWSER', 'firefox')
 
 def after_all(context):
     context.default_browser = ''
