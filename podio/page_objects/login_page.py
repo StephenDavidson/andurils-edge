@@ -2,6 +2,8 @@ from podio.common.page import Page
 
 
 class LoginPage(Page):
+    path = '/login'
+
     ELEMENTS = {
         'email': '#email',
         'password': '#password',

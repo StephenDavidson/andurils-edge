@@ -10,17 +10,13 @@ def set_valid_credentials(context):
 
 @step('I fill in the login form')
 def fill_login_form(context):
-    page = LoginPage(context.browser)
+    page = context.page
     user = context.user
     page['email'].fill(user['email'])
     page['password'].fill(user['password'])
 
-@step('I submit the login form')
-def submit(context):
-    LoginPage(context.browser)['submit'].click()
-
 @step('I should receive a login warning message')
 def should_see_warning(context):
-    login_page = LoginPage(context.browser)
-    warning = login_page['warning'][0]
+    login_page = context.page
+    warning = login_page['warning']
     assert(warning.visible and warning.text)

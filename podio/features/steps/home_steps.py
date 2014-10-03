@@ -5,29 +5,13 @@ from behaving.web.steps import *
 
 @step('I enter a status post')
 def enter_status(context):
-    home_page = HomePage(context.browser)
+    home_page = context.page
     user = context.user
     home_page['status'].fill(user['sentence'])
 
-@step('I click share post')
-def share_post(context):
-    home_page = HomePage(context.browser)
-    home_page['status'].click()
-    home_page['status_submit'][0].click()
-
-@step('I select the default workspace')
-def select_default_workspace(context):
-    home_page = HomePage(context.browser)
-    home_page['default_workspace'][0].click()
-
-@step('I should see the status post')
+@step('The status post should be displayed')
 def should_see_status(context):
-    home_page = HomePage(context.browser)
+    home_page = context.page
     user = context.user
-    home_page.wait_for_stream(user['sentence'])
+    home_page.wait_for_text_present(user['sentence'])
     assert(user['sentence'] in home_page['first_steam_post_title'].text)
-
-@step('I should see a status post error icon')
-def should_see_error_icon(context):
-    home_page = HomePage(context.browser)
-    assert home_page['status_error_icon'][0].visible
